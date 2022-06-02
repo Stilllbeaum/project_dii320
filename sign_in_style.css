@@ -6,8 +6,10 @@ body{
     font-family: sans-serif;
     height: 100vh;
     overflow: hidden;
+    background-size: 100%;
 }
 .center{
+    box-shadow: 5px 5px 5px 5px rgba(188, 183, 183, 0.4);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -102,6 +104,80 @@ form .txt_field{
     color: #666666;
 }
 .signup_link a{
-    color: cornflowerblue;
+    color: #007dba;
     text-decoration: none;
+}
+.txt_field label{
+    color:#777;
+    display: block;
+    margin-bottom: 5px;
+}
+.txt_field input{
+    border:2px solid blanchedalmond;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size:14px;
+}
+.txt_field input:focus{
+    outline: 0;
+    border-color: blanchedalmond;
+}
+.txt_field.error input{
+    border-color:red;
+}
+.txt_field.success input{
+    border-color:green;
+}
+.txt_field small{
+    color:red;
+    position: absolute;
+    bottom:0;
+    left:0;
+    visibility: hidden;
+}
+.txt_field.error small{
+    visibility: visible;
+    left: 6px;
+}
+.icon-bar {
+    padding: 30px;
+    flex-direction: row-reverse;
+    text-align: right;
+    flex-direction: row;
+    
+}
+.active1 {
+    color: #003e51;
+    margin: 10px 40px 10px 20px;
+    font-size: x-large;
+}
+.btn1{
+    color: #003e51;
+    margin:  25px;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    position: relative;
+    top: 30px;
+    font-size: large;
+}
+.btn a::after{
+    content: '';
+    position: absolute;
+    width: 10%;
+    opacity: 0;
+    height: 3px;
+
+    background-image: linear-gradient(to right,#2aba4d,#12a2af);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 25%;
+    transition: .4s;
+}
+.btn a:hover::after{
+    width: 60%;
+    opacity: 1;
 }
