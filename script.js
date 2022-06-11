@@ -30,11 +30,6 @@ let searchParams = new URLSearchParams(window.location.search)
                         html += '<div class="justify-comtent-end d-grid">';
                         html += "<button onDblClick=\"confirm_click('" + obj.mal_id +
                             "');\" class=\btn\">add to <i class=\"fas fa-heart\"></i></button>";
-                        html += '</div>';
-                        html += '</div>';
-                        html += '</div>';
-                        html += '</div>';
-                        html += '</div>';
                         my_card.insertAdjacentHTML('beforeend', html);
                     }
                 });
@@ -42,11 +37,11 @@ let searchParams = new URLSearchParams(window.location.search)
         function confirm_click(data_id) {
             Swal.fire({
                 title: 'Confirm Add Favorite?',
-                showCancelButton: true,
                 confirmButtonColor: '#3085d6',
                 cancelButtonColor: '#d33',
                 confirmButtonText: 'Yes',
                 cancelButtonText: 'NO',
+                showCancelButton: true,
             }).then((result) => {
                 if (result.isConfirmed) {
                     window.location.href = 'favorite.html?id=' + data_id;
