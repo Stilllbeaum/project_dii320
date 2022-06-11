@@ -1,17 +1,14 @@
 
-body{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+body {
     font-family: sans-serif;
-    height: 100vh;
-    overflow: hidden;
-    background-size: 100%;
+    min-height: 100vh;
+    overflow: auto;
+    width: 100%;
+    background-size: cover;
 }
-
-.logo{
+.logo {
     color: #003e51;
-    margin:  25px;
+    margin: 25px;
     text-decoration: none;
     font-weight: 700;
     letter-spacing: 1px;
@@ -20,88 +17,105 @@ body{
     padding: 23px;
 }
 
+.text-movie {
+    color: #003e51;
+}
+
 .icon-bar {
     padding: 30px;
     flex-direction: row-reverse;
     text-align: right;
     flex-direction: row;
-    
+
 }
+
 .active1 {
     color: #003e51;
     margin: 10px 40px 10px 20px;
     font-size: x-large;
+
 }
-.active1:hover{
+
+.active1:hover {
     color: #12557b;
 }
-.btn1{
+
+.btn1 {
     color: #003e51;
-    margin:  25px;
+    margin: 25px;
     text-decoration: none;
     font-weight: 700;
     letter-spacing: 1px;
     position: relative;
     top: 30px;
     font-size: large;
-    right: 38px;
+    left: 65px;
 }
-.btn1:hover{
+
+.btn1:hover {
     color: #12557b;
 }
-.btn a::after{
+
+.btn a::after {
     content: '';
     position: absolute;
     width: 10%;
     opacity: 0;
     height: 3px;
 
-    background-image: linear-gradient(to right,#393f50,#435892);
+    background-image: linear-gradient(to right, #393f50, #435892);
     bottom: -10px;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 25%;
     transition: .4s;
 }
-.btn a:hover::after{
+
+.btn a:hover::after {
     width: 60%;
     opacity: 1;
 }
 
-.search{
+.search {
     justify-content: center;
     display: flex;
     margin: 0 0 40px 0;
-    right: px;
+    right: 0px;
 }
-input{
-    width: 200px;
+
+input {
+    width: 400px;
     height: 30px;
-    padding:  0 5px;
+    padding: 0 5px;
     border: none;
     border-radius: 10px;
 }
-input:focus{
+
+input:focus {
     width: 400px;
     transition: .4s;
 }
-button{
+
+button {
     background-color: #435892;
     border: none;
     color: azure;
     font-weight: bold;
     border-radius: 10px;
 }
-button:hover{
+
+button:hover {
     background-color: white;
     color: #435892;
     transition: .4s;
 }
-.card{
+
+.card {
     margin: 30px;
     justify-content: center;
 }
-.recommend{
+
+.recommend {
     flex-direction: row-reverse;
     justify-content: center;
 }
