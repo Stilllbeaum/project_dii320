@@ -39,3 +39,22 @@ let searchParams = new URLSearchParams(window.location.search)
                     }
                 });
         }
+        function confirm_click(data_id) {
+            Swal.fire({
+                title: 'Confirm Add Favorite?',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes',
+                cancelButtonText: 'NO',
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = 'favorite.html?id=' + data_id;
+                }
+            })
+        }
+
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
