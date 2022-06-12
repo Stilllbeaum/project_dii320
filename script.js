@@ -37,8 +37,8 @@ let searchParams = new URLSearchParams(window.location.search)
         function confirm_click(data_id) {
             Swal.fire({
                 title: 'Confirm Add Favorite?',
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
+                confirmButtonColor: '#179cbc',
+                cancelButtonColor: '#47c0a7',
                 confirmButtonText: 'Yes',
                 cancelButtonText: 'NO',
                 showCancelButton: true,
